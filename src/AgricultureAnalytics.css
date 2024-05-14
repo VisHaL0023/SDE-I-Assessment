@@ -1,0 +1,11 @@
+.cropProductionTable {
+    height: 30rem;
+    width: 40rem;
+    overflow: scroll;
+}
+
+.tableContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

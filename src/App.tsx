@@ -1,11 +1,16 @@
-import React from "react";
+import "@mantine/core/styles.css";
 import "./App.css";
+import AgricultureAnalytics from "./AgricultureAnalytics";
+import { MantineProvider } from "@mantine/core";
 
 function App() {
     return (
-        <div className="App">
-            <p>Vishal</p>
-        </div>
+        <MantineProvider>
+            {/* Your app here */}
+            <div className="App">
+                <AgricultureAnalytics />
+            </div>
+        </MantineProvider>
     );
 }
 
