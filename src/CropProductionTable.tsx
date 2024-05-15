@@ -1,14 +1,14 @@
 import React from "react";
 import { Table } from "@mantine/core";
 
-interface Props {
+interface YearlyProduction {
     maxProduction: Record<string, { production: number; crop: string }>;
     minProduction: Record<string, { production: number; crop: string }>;
 }
 
-const CropProductionTable: React.FC<Props> = ({
-    maxProduction,
+const CropProductionTable: React.FC<YearlyProduction> = ({
     minProduction,
+    maxProduction,
 }) => {
     // Convert data into table rows
     const rows = Object.keys(maxProduction).map((year, ind) => (
@@ -21,7 +21,13 @@ const CropProductionTable: React.FC<Props> = ({
 
     return (
         <Table.ScrollContainer minWidth={100} type="native">
-            <Table striped highlightOnHover withTableBorder withColumnBorders>
+            <Table
+                stickyHeader
+                striped
+                highlightOnHover
+                withTableBorder
+                withColumnBorders
+            >
                 <Table.Thead>
                     <Table.Tr>
                         <Table.Th>Year</Table.Th>

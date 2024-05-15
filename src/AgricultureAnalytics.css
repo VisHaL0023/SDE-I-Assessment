@@ -1,11 +1,41 @@
 .cropProductionTable {
-    height: 30rem;
-    width: 40rem;
-    overflow: scroll;
+    height: 80vh;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .tableContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Styles for medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+    .tableContainer {
+        flex-direction: column;
+    }
+
+    .cropProductionTable {
+        height: 20rem;
+        width: 100%;
+    }
+}
+
+/* Styles for small screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+    .tableContainer {
+        flex-direction: column;
+    }
+
+    .cropProductionTable {
+        height: 20rem;
+        width: 100%;
+        overflow: scroll;
+    }
 }
